@@ -5,20 +5,14 @@ body {
     background: #1f1f1f;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 .mondrian {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 20% 30% 20% 10% 20%;
     grid-auto-rows: minmax(150px, auto);
-    justify-items: stretch;
-    align-items: stretch;
 }
 
-.mondrian,.sq {
-    border-width: 8px;
+.sq {
+    border-width: 5px;
     border-color: #1f1f1f;
     border-style: solid;
 }
@@ -38,14 +32,13 @@ body {
 #square3 {
     grid-column: 1;
     grid-row: 2;
-    background: #ffebd9 ;
+    background: #ffebd9;
 }
 
 #square4 {
     grid-column: 1;
     grid-row: 4;
     background: #ecfbfc;
-
 }
 
 #square5 {
@@ -118,4 +111,29 @@ body {
     grid-column: 6;
     grid-row: 5;
     background: #ecfbfc;
+}
+
+/* SCREEN 600px */
+
+@media only screen and (max-width: 800px) {
+    .mondrian {
+        grid-template-columns: 25% 50% 25%;
+    }
+
+    .sq {
+        border-width: 4px;
+    }
+}
+
+
+/* SCREEN 1200px */
+
+@media only screen and (min-width: 1200px) {
+    .mondrian {
+        grid-template-columns: 16.667% 16.667% 16.667% 16.667%;
+    }
+
+    .sq {
+        border-width: 6px;
+    }
 }
